@@ -1,0 +1,10 @@
+node_modules
+lib
+
+# project specific (not to checkin)
+*.bot
+deploymentTemplates/
+.vscode/
+package-lock.json
+
+

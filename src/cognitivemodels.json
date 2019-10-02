@@ -1,0 +1,26 @@
+{
+  "cognitiveModels": {
+    "en": {
+      "dispatchModel": {
+        "appId": "your-luis-appid",
+        "authoringKey": "your-luis-authkey",
+        "subscriptionKey": "your-luis-authkey",
+        "name": "FlightBooking",
+        "authoringRegion": "westus",
+        "region": "westus",
+        "type": "dispatch"
+      },
+      "knowledgeBases": [
+        {
+          "hostname": "https://your-qnamaker-service-hostname/qnamaker",
+          "subscriptionKey": "your-qnamaker-endpoint-authkey",
+          "kbId": "your-qnamaker-kb-id",
+          "name": "weatherkb",
+          "endpointKey": "your-qnamaker-endpoint-authkey",
+          "id": "weatherkb"
+        }
+      ]      
+    }
+  },
+  "defaultLocale": "en-us"
+}
