@@ -62,7 +62,7 @@ The prerequisite outlined above contain the steps necessary to provision a langu
     npm start
     ```
 
-- Or, have the app run in debug mode
+- Or, have the app run in debug mode [in VS Code]
 
 ## Testing the bot using Bot Framework Emulator
 
