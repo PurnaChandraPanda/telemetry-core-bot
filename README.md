@@ -19,11 +19,30 @@ This bot uses [LUIS](https://www.luis.ai), an AI based cognitive service, to imp
     node --version
     ```
 
+### Create application insights resource
+
+- make a note of instrumentation key
+- for powerbi portion, necessary key details need be generated as [here](https://microsoft.github.io/botframework-solutions/reference/analytics/powerbi/)
+
+### Create a Bot Channels Registration
+
+- create bot channels registration
+- make a note of appid/ password
+- update the bot channels registration with correct appinsights key value
+
 ### Create a LUIS Application to enable language understanding
 
 - LUIS language model setup, training, and application configuration steps can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-luis?view=azure-bot-service-4.0).
 - For this project, the json definition for luis app is kept [here](./cognitiveModels/FlightBooking.json).
 - Make sure to create a luis app, and name it as `FlightBooking`, and import the definition as in said JSON file.
+- Basically, the JSON file have two major intents `GetWeather` and `BookFlight`. 
+- The `GetWeather` intent would be utilized to make a further qna maker service call. 
+- The `BookFlight` intent would be utilized to just for intent understanding in the flight booking flow.
+
+### Create a qna maker service application
+
+- name the kb as `weatherkb`
+- make sure earlier created application insights is configured for qna maker service app
 
 # To run the bot
 
@@ -41,6 +60,9 @@ The prerequisite outlined above contain the steps necessary to provision a langu
     ```bash
     npm start
     ```
+
+- Or, have the app run in debug mode
+
 ## Testing the bot using Bot Framework Emulator
 
 [Bot Framework Emulator](https://github.com/microsoft/botframework-emulator) is a desktop application that allows bot developers to test and debug their bots on localhost or running remotely through a tunnel.
@@ -57,19 +79,3 @@ The prerequisite outlined above contain the steps necessary to provision a langu
 
 To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions.
 
-
-## Further reading
-
-- [Bot Framework Documentation](https://docs.botframework.com)
-- [Bot Basics](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0)
-- [Dialogs](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0)
-- [Gathering Input Using Prompts](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-prompts?view=azure-bot-service-4.0)
-- [Activity processing](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-activity-processing?view=azure-bot-service-4.0)
-- [Azure Bot Service Introduction](https://docs.microsoft.com/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)
-- [Azure Bot Service Documentation](https://docs.microsoft.com/azure/bot-service/?view=azure-bot-service-4.0)
-- [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)
-- [Azure Portal](https://portal.azure.com)
-- [Language Understanding using LUIS](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/)
-- [Channels and Bot Connector Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
-- [Restify](https://www.npmjs.com/package/restify)
-- [dotenv](https://www.npmjs.com/package/dotenv)
