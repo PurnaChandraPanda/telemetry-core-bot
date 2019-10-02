@@ -42,6 +42,7 @@ This bot uses [LUIS](https://www.luis.ai), an AI based cognitive service, to imp
 ### Create a qna maker service application
 
 - name the kb as `weatherkb`
+- set the source FAQ URL as `https://public.wmo.int/en/about-us/FAQs/faqs-weather`
 - make sure earlier created application insights is configured for qna maker service app
 
 # To run the bot
