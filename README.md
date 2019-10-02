@@ -1,13 +1,8 @@
 # telemetry-core-bot
 
-this bot would show telemtry logging in application insights
+This bot would show telemtry logging in application insights, and review in powerbi.
 
-This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to:
-
-- Use [LUIS](https://www.luis.ai) to implement core AI capabilities
-- Implement a multi-turn conversation using Dialogs
-- Handle user interruptions for such things as `Help` or `Cancel`
-- Prompt for and validate requests for information from the user
+This bot has been created using `yo botbuilder` command line. And, selected `Javascript` as language along with `Core Bot` template.
 
 ## Prerequisites
 
@@ -26,7 +21,9 @@ This bot uses [LUIS](https://www.luis.ai), an AI based cognitive service, to imp
 
 ### Create a LUIS Application to enable language understanding
 
-LUIS language model setup, training, and application configuration steps can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-luis?view=azure-bot-service-4.0).
+- LUIS language model setup, training, and application configuration steps can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-luis?view=azure-bot-service-4.0).
+- For this project, the json definition for luis app is kept [here](./cognitiveModels/FlightBooking.json).
+- Make sure to create a luis app, and name it as `FlightBooking`, and import the definition as in said JSON file.
 
 # To run the bot
 
